@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="Yamil Steven Lasso Ledesma">
+		<title>Test Falabella - Yamil Lasso</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<div class="main-container">
+			<ul class="prod">
+				<script id ="template" type="text/x-handlebars-template">
+						<li class="{{tipoOferta}}">
+							<image src='http://falabella.scene7.com/is/image/FalabellaCO/{{sku}}'>
+							<h2 class="titulo">{{marca}}</h2>
+							{{#if descripcion}}<p class="lead">{{descripcion}}</p>{{/if}}
+							{{#if precio2}}<p class="precio2">${{precio2}}</p>{{/if}}
+							{{#if precio1}}<p class="precio1">Oferta ${{precio1}}</p>{{/if}}
+							{{#if precio3}}<p class="precio3">Normal: <span>${{precio3}}<span></p>{{/if}}
+							{{#if mensaje}}<p class="mensaje">{{mensaje}}</p>{{/if}}
+							<p class="unidades">{{unidades}} Unidades disponibles</p>
+							{{#if validoDesde}}<p class="fecha">Oferta válida desde {{validoDesde}}, hasta el {{validoHasta}}</p>{{/if}}
+							<p class="exclusivo">Exclusivo <span>Falabella.com</span></p>
+						</li>
+				</script>
+			</ul>
+		</div>
+
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/handlebars-v3.0.3.js"></script>
+		<script src="js/numbers.js"></script>
+		<script src="js/general.js"></script>
+	</body>
+</html>
